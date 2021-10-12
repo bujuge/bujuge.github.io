@@ -48,8 +48,10 @@ systemctl stop cuocuo@azhk
 OUT_ALERT "[提示] 停止成功"
 
 OUT_ALERT "[提示] 从云端更新配置"
+cd /etc/cuocuo
 wget -O one.json https://bujuge.github.io/one.json
 wget -O azhk.json https://bujuge.github.io/azhk.json
+cd
 OUT_ALERT "[提示] 更新成功"
 
 OUT_ALERT "[提示] 重启cuocuo程序"
