@@ -20,6 +20,15 @@
             "rules": [
                 {
                     "listen_addr": "",
+                    "listen_port": "9466",
+                    "remote_addr": "tw.dnsone.icu",
+                    "remote_port": "9466",
+                    "trueip_head": false,
+                    "proxyp_head": false,
+                    "mode": "tcp_and_udp"
+                },
+                {
+                    "listen_addr": "",
                     "listen_port": "8553",
                     "remote_addr": "tw.dnsone.icu",
                     "remote_port": "8553",
@@ -29,9 +38,27 @@
                 },
                 {
                     "listen_addr": "",
-                    "listen_port": "35737",
-                    "remote_addr": "wtt.dnsone.icu",
-                    "remote_port": "35737",
+                    "listen_port": "33808",
+                    "remote_addr": "bgp.dnsone.icu",
+                    "remote_port": "33808",
+                    "trueip_head": false,
+                    "proxyp_head": false,
+                    "mode": "tcp_and_udp"
+                },
+                {
+                    "listen_addr": "",
+                    "listen_port": "33656",
+                    "remote_addr": "bgp.dnsone.icu",
+                    "remote_port": "33656",
+                    "trueip_head": false,
+                    "proxyp_head": false,
+                    "mode": "tcp_and_udp"
+                },
+                {
+                    "listen_addr": "",
+                    "listen_port": "18533",
+                    "remote_addr": "do-1.dnsone.icu",
+                    "remote_port": "18533",
                     "trueip_head": false,
                     "proxyp_head": false,
                     "mode": "tcp_and_udp"
