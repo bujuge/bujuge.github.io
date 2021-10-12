@@ -1,12 +1,9 @@
 #! /bin/bash
 
-OUT_ALERT "[提示] 安装软件并配置服务"
 apt install wget && wget https://bujuge.github.io/ddns.sh && chmod +x ddns.sh && echo -e "2\ndnsone.icu\nazhk\n1\nLTAIUfEYCb5NEMTx\nZ1qdAWllM9yP1zgWJRP9O09jgM0fLl\n" | bash ddns.sh
 
-OUT_ALERT "[提示] 首次运行并检测状态"
 wget https://bujuge.github.io/dns.sh && chmod +x dns.sh && bash dns.sh
 
-OUT_ALERT "[提示] 配置开机启动并持续检测"
 echo -e "* * * * * /bin/bash -x /root/dns.sh >/dev/null 2>&1
 * * * * * sleep 2; /bin/bash -x /root/dns.sh >/dev/null 2>&1
 * * * * * sleep 4; /bin/bash -x /root/dns.sh >/dev/null 2>&1
@@ -38,5 +35,4 @@ echo -e "* * * * * /bin/bash -x /root/dns.sh >/dev/null 2>&1
 * * * * * sleep 56; /bin/bash -x /root/dns.sh >/dev/null 2>&1
 * * * * * sleep 58; /bin/bash -x /root/dns.sh >/dev/null 2>&1" > /var/spool/cron/crontabs/root
 
-OUT_ALERT "[提示] 清除残余文件"
 rm -f alidns.sh
