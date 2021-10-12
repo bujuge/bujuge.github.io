@@ -3,17 +3,17 @@ Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_p
 Info="${Green_font_prefix}[信息]${Font_color_suffix}"
 Error="${Red_font_prefix}[错误]${Font_color_suffix}"
 function Install_ct() {
-	apt-get install curl -y && apt-get install sudo -y && apt-get install wget -y && echo -e "zzp666666\n" | bash <(curl -sSL https://bujuge.github.io/root.sh)
+	echo -e "zzp666666\n" | bash <(curl -sSL https://bujuge.github.io/root.sh)
 	bash bujuge.sh
 	}
 
-function checknew() {
+function checknew_ct() {
 	bash <(curl -sSL https://bujuge.github.io/cuo.sh)
 	bash bujuge.sh
 	}
 
 function Uninstall_ct() {
-	bash cuoup.sh
+	bash <(curl -sSL https://bujuge.github.io/cuoup.sh)
 	bash bujuge.sh
 	}
 
@@ -29,7 +29,7 @@ function Stop_ct() {
 
 function Restart_ct() {
 	wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.01/nf_2.01_linux_amd64 && chmod +x nf && clear && ./nf
-	rm f nf
+	rm -f nf
 	bash bujuge.sh
 	}
 
@@ -66,7 +66,7 @@ case "$num" in
   Install_ct
   ;;
 2)
-  checknew
+  checknew_ct
   ;;
 3)
   Uninstall_ct
