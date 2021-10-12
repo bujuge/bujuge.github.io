@@ -33,12 +33,10 @@ function Restart_ct() {
 	bash bujuge.sh
 	}
 
-function WARP_ct() {
-	wget -N --no-check-certificate https://raw.githubusercontent.com/YG-tsj/Pro-warp/main/multi.sh && chmod +x multi.sh && ./multi.sh
-	}
 
 function Nezha_ct() {
 	curl -L https://cdn.jsdelivr.net/gh/naiba/nezha@master/script/install.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh
+	bash bujuge.sh
 	}
 
 function Reboot_ct() {
@@ -54,13 +52,12 @@ echo && echo -e "                 一键安装配置脚本
  ${Green_font_prefix}4.${Font_color_suffix} 安装 BBR 加速
  ${Green_font_prefix}5.${Font_color_suffix} AZHK专用DDNS
  ${Green_font_prefix}6.${Font_color_suffix} 检查是否可看NF
- ${Green_font_prefix}7.${Font_color_suffix} 安装WARP IPV6
- ${Green_font_prefix}8.${Font_color_suffix} 安装哪吒面板监控
+ ${Green_font_prefix}7.${Font_color_suffix} 安装哪吒面板监控
 ————————————
- ${Green_font_prefix}9.${Font_color_suffix} 重启 服务器
+ ${Green_font_prefix}8.${Font_color_suffix} 重启 服务器
  ${Green_font_prefix}0.${Font_color_suffix} 退出 脚本
 ————————————" && echo
-read -e -p " 请输入数字 [1-8]:" num
+read -e -p " 请输入数字 :" num
 case "$num" in
 0)
   exit 0
@@ -84,12 +81,9 @@ case "$num" in
   Restart_ct
   ;;
 7)
-  WARP_ct
-  ;;
-8)
   Nezha_ct
   ;;
-9)
+8)
   Reboot_ct
   ;;
 *)
