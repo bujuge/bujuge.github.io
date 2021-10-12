@@ -88,4 +88,5 @@ esac
 OUT_ALERT "[提示] 重启成功"
 
 OUT_INFO "[信息] 部署完毕！"
+cd
 exit 0
