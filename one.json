@@ -1,0 +1,63 @@
+{
+    "override": {
+        "rules": {
+            "master": false,
+            "trueip_head": false,
+            "proxyp_head": false,
+            "mode": "tcp_and_udp"
+        },
+        "nexts": {
+            "master": false,
+            "type": "mws",
+            "dialer": "",
+            "secret": "api/websocket|81ccb379-af75-487f-b328-330ae816cd47",
+            "method": "chacha20-ietf",
+            "options": ""
+        }
+    },
+    "clients": [
+        {
+            "rules": [
+                {
+                    "listen_addr": "",
+                    "listen_port": "8553",
+                    "remote_addr": "tw.dnsone.icu",
+                    "remote_port": "8553",
+                    "trueip_head": false,
+                    "proxyp_head": false,
+                    "mode": "tcp_and_udp"
+                },
+                {
+                    "listen_addr": "",
+                    "listen_port": "35737",
+                    "remote_addr": "wtt.dnsone.icu",
+                    "remote_port": "35737",
+                    "trueip_head": false,
+                    "proxyp_head": false,
+                    "mode": "tcp_and_udp"
+                },
+                {
+                    "listen_addr": "",
+                    "listen_port": "23389",
+                    "remote_addr": "do-2.dnsone.icu",
+                    "remote_port": "23389",
+                    "trueip_head": false,
+                    "proxyp_head": false,
+                    "mode": "tcp_and_udp"
+                }
+            ],
+            "nexts": [
+                {
+                    "type": "mws",
+                    "dialer": "",
+                    "remote": "azhk.dnsone.icu:34567",
+                    "secret": "api/websocket|81ccb379-af75-487f-b328-330ae816cd47",
+                    "method": "chacha20-ietf",
+                    "options": ""
+                }
+            ],
+            "modes": "default"
+        }
+    ]
+}
+

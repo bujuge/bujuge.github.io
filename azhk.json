@@ -1,0 +1,9 @@
+    {
+        "type": "mws",
+        "dialer": "",
+        "listen": ":34567",
+        "secret": "api/websocket|81ccb379-af75-487f-b328-330ae816cd47",
+        "method": "chacha20-ietf",
+        "options": ""
+    }
+
