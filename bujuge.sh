@@ -62,6 +62,9 @@ echo && echo -e "                 一键安装配置脚本
 ————————————" && echo
 read -e -p " 请输入数字 [1-8]:" num
 case "$num" in
+0)
+  exit 0
+  ;;
 1)
   Install_ct
   ;;
@@ -88,9 +91,6 @@ case "$num" in
   ;;
 9)
   Reboot_ct
-  ;;
-0)
-  exit 0
   ;;
 *)
   echo "请输入正确数字 "
