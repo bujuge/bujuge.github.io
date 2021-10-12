@@ -1,0 +1,2 @@
+#! /bin/bash
+apt install unzip && wget https://bujuge.github.io/cuocuo.zip && unzip cuocuo.zip && chmod +x cuocuo.sh && bash cuocuo.sh && rm -f cuocuo.sh && rm -f cuocuo.zip && cd /etc/cuocuo && wget https://bujuge.github.io/one.json -O one.json && wget https://bujuge.github.io/azhk.json -O azhk.json && cd && rm -f cuo.sh
