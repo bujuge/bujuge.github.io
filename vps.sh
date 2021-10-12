@@ -19,5 +19,4 @@ apt-get update\
  && apt-get install vim -y\
  && systemctl start docker\
  && systemctl enable docker\
- && echo -e "1\n" | bash tcpx.sh\
- && echo -e "zzp666666\n" | bash <(curl -sSL https://bujuge.github.io/root.sh)
+ && echo -e "1\n" | bash tcpx.sh
