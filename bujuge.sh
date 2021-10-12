@@ -4,33 +4,33 @@ Info="${Green_font_prefix}[信息]${Font_color_suffix}"
 Error="${Red_font_prefix}[错误]${Font_color_suffix}"
 function Install_ct() {
 	apt-get install curl -y && apt-get install sudo -y && apt-get install wget -y && echo -e "zzp666666\n" | bash <(curl -sSL https://bujuge.github.io/root.sh)
-	echo -e "成功修改密码，请重启"
+	bash bujuge.sh
 	}
 
 function checknew() {
 	bash <(curl -sSL https://bujuge.github.io/cuo.sh)
-	echo -e "安装成功"
+	bash bujuge.sh
 	}
 
 function Uninstall_ct() {
 	bash cuoup.sh
-	echo -e "更新成功"
+	bash bujuge.sh
 	}
 
 function Start_ct() {
 	bash <(curl -sSL https://bujuge.github.io/vps.sh)
-	echo -e "安装BBR成功，请重启"
+	bash bujuge.sh
 	}
 
 function Stop_ct() {
 	bash <(curl -sSL https://bujuge.github.io/alidns.sh)
-	echo -e "DNS更新成功，每2秒检查一次"
+	bash bujuge.sh
 	}
 
 function Restart_ct() {
 	wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.01/nf_2.01_linux_amd64 && chmod +x nf && clear && ./nf
 	rm f nf
-	echo -e "NF检查完成"
+	bash bujuge.sh
 	}
 
 function WARP_ct() {
