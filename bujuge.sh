@@ -44,7 +44,7 @@ function Reboot_ct() {
 	}
 	
 function Multi_ct() {
-	bash <(curl -sSL https://bujuge.github.io/multi.sh)
+	wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/kkkyg/CFwarp/CFwarp.sh && chmod +x CFwarp.sh && ./CFwarp.sh
 	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
