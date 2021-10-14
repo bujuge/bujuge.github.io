@@ -4,43 +4,48 @@ Info="${Green_font_prefix}[信息]${Font_color_suffix}"
 Error="${Red_font_prefix}[错误]${Font_color_suffix}"
 function Install_ct() {
 	echo -e "zzp666666\n" | bash <(curl -sSL https://bujuge.github.io/root.sh)
-	bash bujuge.sh
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
 function checknew_ct() {
 	bash <(curl -sSL https://bujuge.github.io/cuo.sh)
-	bash bujuge.sh
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
 function Uninstall_ct() {
 	bash <(curl -sSL https://bujuge.github.io/cuoup.sh)
-	bash bujuge.sh
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
 function Start_ct() {
 	bash <(curl -sSL https://bujuge.github.io/vps.sh)
-	bash bujuge.sh
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
 function Stop_ct() {
 	bash <(curl -sSL https://bujuge.github.io/alidns.sh)
-	bash bujuge.sh
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
 function Restart_ct() {
 	wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.01/nf_2.01_linux_amd64 && chmod +x nf && clear && ./nf
 	rm -f nf
-	bash bujuge.sh
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
 
 function Nezha_ct() {
 	curl -L https://cdn.jsdelivr.net/gh/naiba/nezha@master/script/install.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh
-	bash bujuge.sh
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
 function Reboot_ct() {
 	reboot
+	}
+	
+function Multi_ct() {
+	bash <(curl -sSL https://bujuge.github.io/multi.sh)
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
 echo && echo -e "                 一键安装配置脚本
@@ -53,8 +58,9 @@ echo && echo -e "                 一键安装配置脚本
  ${Green_font_prefix}5.${Font_color_suffix} AZHK专用DDNS
  ${Green_font_prefix}6.${Font_color_suffix} 检查是否可看NF
  ${Green_font_prefix}7.${Font_color_suffix} 安装哪吒面板监控
+ ${Green_font_prefix}8.${Font_color_suffix} 安装 WARP
 ————————————
- ${Green_font_prefix}8.${Font_color_suffix} 重启 服务器
+ ${Green_font_prefix}9.${Font_color_suffix} 重启 服务器
  ${Green_font_prefix}0.${Font_color_suffix} 退出 脚本
 ————————————" && echo
 read -e -p " 请输入数字 :" num
@@ -84,6 +90,9 @@ case "$num" in
   Nezha_ct
   ;;
 8)
+  Multi_ct
+  ;;
+ 9)
   Reboot_ct
   ;;
 *)
