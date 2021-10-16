@@ -46,8 +46,8 @@ for cmd in echo /bin/echo; do
 						        exit 1
 						}
 OUT_ALERT "[提示] 停止cuocuo程序的运行"
-systemctl stop cuocuo@one
-systemctl stop cuocuo@azhk
+systemctl disable --now cuocuo@one
+systemctl disable --now cuocuo@azhk
 OUT_ALERT "[提示] 停止成功"
 
 OUT_ALERT "[提示] 重启cuocuo程序"
@@ -55,13 +55,13 @@ OUT_ALERT "[提示] 重启cuocuo程序"
 function Install_ct() {
 	cd /etc/cuocuo
         wget -O one.json https://bujuge.github.io/one.json
-	systemctl restart cuocuo@one
+	systemctl enable --now cuocuo@one
 	}
 
 function checknew_ct() {
 	cd /etc/cuocuo
         wget -O azhk.json https://bujuge.github.io/azhk.json
-	systemctl restart cuocuo@azhk
+	systemctl enable --now cuocuo@azhk
 	}
 
 echo && echo -e "                 一键安装配置脚本
