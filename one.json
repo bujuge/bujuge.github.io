@@ -47,8 +47,26 @@
                 },
                 {
                     "listen_addr": "",
+                    "listen_port": "35737",
+                    "remote_addr": "hkt.dnsone.icu",
+                    "remote_port": "35737",
+                    "trueip_head": false,
+                    "proxyp_head": false,
+                    "mode": "tcp_and_udp"
+                },
+                {
+                    "listen_addr": "",
+                    "listen_port": "33707",
+                    "remote_addr": "wtt.dnsone.icu",
+                    "remote_port": "33707",
+                    "trueip_head": false,
+                    "proxyp_head": false,
+                    "mode": "tcp_and_udp"
+                },
+                {
+                    "listen_addr": "",
                     "listen_port": "33656",
-                    "remote_addr": "bgp.dnsone.icu",
+                    "remote_addr": "hgc.dnsone.icu",
                     "remote_port": "33656",
                     "trueip_head": false,
                     "proxyp_head": false,
