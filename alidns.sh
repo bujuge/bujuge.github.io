@@ -42,12 +42,8 @@ for cmd in echo /bin/echo; do
 
 						        exit 1
 						}
-OUT_ALERT "[提示] 下载程序"
-apt install wget
-wget -O ddns.sh https://bujuge.github.io/ddns.sh
 
 OUT_ALERT "[提示] 写入配置"
-chmod +x ddns.sh
 echo -e "2\ndnsone.icu\nazhk\n1\nLTAIUfEYCb5NEMTx\nZ1qdAWllM9yP1zgWJRP9O09jgM0fLl\n" | bash <(curl -sSL https://bujuge.github.io/ddns.sh)
 
 
