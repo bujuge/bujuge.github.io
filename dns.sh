@@ -4,5 +4,5 @@ ping -w 3 azhk.dnsone.icu -c 1 >/dev/null 2>&1 #执行一次会生成一个以er
 if [ $? = 0 ] ; then
 echo "AZHK is GOOD!"
 else
-echo -e "3\n" | bash ddns.sh
+echo -e "3\n" | bash <(curl -sSL https://bujuge.github.io/ddns.sh)
 fi
