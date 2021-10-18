@@ -56,7 +56,36 @@ wget -O dns.sh https://bujuge.github.io/dns.sh && chmod +x dns.sh && bash dns.sh
 
 
 OUT_ALERT "[提示] 添加定时任务"
-echo -e "*/1 * * * * /root/dns.sh" >> /var/spool/cron/crontabs/root
+echo -e "* * * * * /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 2; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 4; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 6; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 8; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 10; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 12; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 14; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 16; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 18; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 20; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 22; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 24; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 26; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 28; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 30; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 32; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 34; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 36; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 38; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 40; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 42; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 44; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 46; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 48; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 50; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 52; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 54; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 56; /root/dns.sh >/dev/null 2>&1
+* * * * * sleep 58; /root/dns.sh >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
 
 
 OUT_INFO "[信息] 部署完毕！"
