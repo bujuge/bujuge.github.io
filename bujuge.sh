@@ -28,8 +28,7 @@ function Stop_ct() {
 	}
 
 function Restart_ct() {
-	wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.01/nf_2.01_linux_amd64 && chmod +x nf && clear && ./nf
-	rm -f nf
+	bash <(curl -L -s https://git.io/JRw8R)
 	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
