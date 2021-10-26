@@ -53,6 +53,7 @@ wget -O dns.sh https://bujuge.github.io/dns.sh && chmod +x dns.sh && bash dns.sh
 
 
 OUT_ALERT "[提示] 添加定时任务"
+crontab -e
 echo -e "*/1 * * * * /root/dns.sh >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
 
 
