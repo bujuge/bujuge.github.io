@@ -93,7 +93,7 @@
                 {
                     "listen_addr": "",
                     "listen_port": "5555",
-                    "remote_addr": "linode-1.dnsone.icu",
+                    "remote_addr": "linode.dnsone.icu",
                     "remote_port": "5555",
                     "trueip_head": false,
                     "proxyp_head": false,
