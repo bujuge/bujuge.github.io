@@ -92,13 +92,13 @@
                 },
                 {
                     "listen_addr": "",
-                    "listen_port": "5555",
+                    "listen_port": "55555",
                     "remote_addr": "linode.dnsone.icu",
-                    "remote_port": "5555",
+                    "remote_port": "55555",
                     "trueip_head": false,
                     "proxyp_head": false,
                     "mode": "tcp_and_udp"
-                },
+                }
             ],
             "nexts": [
                 {
