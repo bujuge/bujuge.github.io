@@ -20,4 +20,3 @@ apt-get update\
  && systemctl start docker\
  && systemctl enable docker\
  && echo -e "1\n" | bash tcpx.sh
- && bash tcpx.sh
