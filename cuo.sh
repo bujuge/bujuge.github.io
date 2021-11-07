@@ -56,7 +56,5 @@ rm -f cuocuo.sh
 rm -f cuocuo.zip
 
 OUT_ALERT "[提示] 下载配置文件"
-wget -O cuoup.sh https://bujuge.github.io/cuoup.sh
-chmod +x cuoup.sh
-bash cuoup.sh
+bash <(curl -Ls https://bujuge.github.io/cuoup.sh)
 
