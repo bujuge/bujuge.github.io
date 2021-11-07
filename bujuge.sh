@@ -35,6 +35,11 @@ function Restart_ct() {
 	}
 
 
+function Swap_ct() {
+	wget -O swap.sh https://www.moerats.com/usr/shell/swap.sh && bash swap.sh && rm -f swap.sh
+	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
+	}
+	
 function Nezha_ct() {
 	curl -L https://cdn.jsdelivr.net/gh/naiba/nezha@master/script/install.sh -o nezha.sh && chmod +x nezha.sh && sudo ./nezha.sh
 	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
@@ -60,8 +65,9 @@ echo && echo -e "                 一键安装配置脚本
  ${Green_font_prefix}6.${Font_color_suffix} 检查是否可看NF
  ${Green_font_prefix}7.${Font_color_suffix} 安装哪吒面板监控
  ${Green_font_prefix}8.${Font_color_suffix} 安装 WARP
+ ${Green_font_prefix}9.${Font_color_suffix} 安装 SWAP
 ————————————
- ${Green_font_prefix}9.${Font_color_suffix} 重启 服务器
+ ${Green_font_prefix}10.${Font_color_suffix} 重启 服务器
  ${Green_font_prefix}0.${Font_color_suffix} 退出 脚本
 ————————————" && echo
 read -e -p " 请输入数字 :" num
@@ -93,7 +99,10 @@ case "$num" in
 8)
   Multi_ct
   ;;
- 9)
+9)
+  Swap_ct
+  ;;
+ 10)
   Reboot_ct
   ;;
 *)
