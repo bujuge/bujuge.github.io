@@ -19,7 +19,8 @@ function Uninstall_ct() {
 
 function Start_ct() {
 	bash <(curl -sSL https://bujuge.github.io/vps.sh)
-	bash tcpx.sh
+	echo -e "13\n" | bash tcpx.sh
+	rm -f tcpx.sh
 	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
