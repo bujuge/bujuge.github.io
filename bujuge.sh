@@ -3,7 +3,7 @@ Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_p
 Info="${Green_font_prefix}[信息]${Font_color_suffix}"
 Error="${Red_font_prefix}[错误]${Font_color_suffix}"
 function Install_ct() {
-	echo -e "zzp666666\n" | bash <(curl -sSL https://bujuge.github.io/root.sh)
+	bash <(curl -sSL https://bujuge.github.io/root.sh)
 	bash <(curl -sSL https://bujuge.github.io/bujuge.sh)
 	}
 
