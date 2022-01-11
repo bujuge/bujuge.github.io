@@ -54,19 +54,19 @@ OUT_ALERT "[提示] 重启cuocuo程序"
 
 function Install_ct() {
 	cd /etc/cuocuo
-        wget -O one.json https://bujuge.github.io/one.json
-	systemctl enable --now cuocuo@one
+        wget -O bjg.json https://bujuge.github.io/bjg.json
+	systemctl enable --now cuocuo@bjg
 	}
 
 function checknew_ct() {
 	cd /etc/cuocuo
-        wget -O azhk.json https://bujuge.github.io/azhk.json
-	systemctl enable --now cuocuo@azhk
+        wget -O server.json https://bujuge.github.io/server.json
+	systemctl enable --now cuocuo@server
 	}
 
 echo && echo -e "                 一键安装配置脚本
- ${Green_font_prefix}1.${Font_color_suffix} 更新 ONE
- ${Green_font_prefix}2.${Font_color_suffix} 更新 AZHK
+ ${Green_font_prefix}1.${Font_color_suffix} 更新 BJG
+ ${Green_font_prefix}2.${Font_color_suffix} 更新 SERVER
 ————————————
  ${Green_font_prefix}0.${Font_color_suffix} 退出
 ————————————" && echo
